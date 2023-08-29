@@ -5,7 +5,7 @@ const reducer=(state,action)=>{
     switch(action.type){
         //product reducer
         case 'ALL_PRODUCTS':
-            return{...state,allProducts:action.payload}
+            return{...state,allProducts:action.payload,categoryProduct:action.payload}
         case 'SINGLE_PRODUCT':
             return {...state ,singleProduct: action.payload }
         
@@ -51,7 +51,6 @@ const reducer=(state,action)=>{
         //category reducer
         case 'FILTER_PRODUCT':
             const {allProducts,categories} = state;
-            console.log(categories)
             let tempArray=[...allProducts];
 
             if(categories!=='all'){
