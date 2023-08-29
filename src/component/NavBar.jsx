@@ -1,11 +1,12 @@
 import React from 'react'
 import { links } from '../utils/component'
+import { Link } from 'react-router-dom';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
 export default function NavBar() {
   return (
     <div className='container flex flex-row items-center justify-around shadow-md p-1 rounded-md'>
         <div className='md:w-1/3 text-2xl font-bold'>
-            <h1>XYZ <span>company</span></h1>
+            <Link to='/'>XYZ <span className='text-sm'>company</span></Link>
         </div>
         <div className='md:flex justify-around gap-2 w-[50%] hidden md:text-xs lg:text-xl'>
             {links.map(link=>{
@@ -16,7 +17,7 @@ export default function NavBar() {
             })}
         </div>
         <div>
-            <button className='flex items-center gap-1 bg-yellow px-2 py-1 rounded-md hover:bg-blue hover:text-yellow'>Cart<span><AiOutlineShoppingCart/></span></button>
+            <Link to='/cart' className='flex items-center gap-1 bg-yellow px-2 py-1 rounded-md hover:bg-blue hover:text-yellow'>Cart<span><AiOutlineShoppingCart/></span></Link>
         </div>
     </div>
   )

@@ -1,7 +1,7 @@
 
-export const products_url='https://dummyjson.com/docs/products'
+export const products_url='https://dummyjson.com/products'
 
-export const single_product_url='https://dummyjson.com/docs/products/'
+export const single_product_url='https://dummyjson.com/products/'
 
 
 
